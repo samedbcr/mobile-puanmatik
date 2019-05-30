@@ -1,0 +1,56 @@
+<ion-view view-title="Puanmatik">
+  <ion-content>
+
+  	<div class="card">
+  		<div class="item item-text-wrap item-stable">
+   			 Merhaba <b>{{isim}}</b>, lütfen netlerinizi giriniz.
+  		</div>
+	</div>
+	<br>
+<!-- MAT -->
+	<div class="list">
+  		<div class=" range range-positive">
+    		MAT
+   		 	<input type="range" ng-model="mat"  min="0" max="40" >
+			{{mat}}
+  		</div>
+<!-- SOS -->
+  		<div class=" range range-positive">
+    		FEN
+   		 	<input type="range" ng-model="fen"  min="0" max="40" >
+			{{fen}}
+  		</div>
+<!-- TUR -->
+  		<div class=" range range-positive">
+    		TUR
+   		 	<input type="range" ng-model="tur"  min="0" max="40" >
+			{{tur}}
+  		</div>
+<!-- SOS -->
+  		<div class=" range range-positive">
+    		SOS
+   		 	<input type="range" ng-model="sos"  min="0" max="40" >
+			{{sos}}
+  		</div>
+	</div>
+	<!-- <br> -->
+	
+	<div class="card">
+  		<div class="item item-text-wrap item-stable">
+			<center> SAYISAL PUAN: <b>{{200+1.8*mat+1.2*fen+0.9*tur+0.4*sos}}</b></center>
+			
+  		</div>
+  		<div class="item item-text-wrap item-stable">
+			<center> SÖZEL PUAN: <b>{{200+1.8*tur+1.2*fen+0.9*mat+0.4*sos}}</b></center>
+			
+  		</div>
+  		<div class="item item-text-wrap item-stable">
+			<center> EŞİT A. PUAN: <b>{{200+1.8*fen+1.2*mat+0.9*sos+0.4*tur}}</b></center>
+			
+  		</div>
+	</div>
+	
+				
+
+  </ion-content>
+</ion-view>
